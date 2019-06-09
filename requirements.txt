@@ -5,6 +5,6 @@ gunicorn
 numpy
 flask
 tensorflow-gpu
-cudatoolkit==9.0
+cuda==9.0
 pillow
 keras==2.1.4
