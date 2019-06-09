@@ -6,4 +6,4 @@ numpy
 flask
 tensorflow-gpu
 pillow
-keras=2.1.4
+keras==2.1.4
