@@ -1,5 +1,4 @@
 from flask import request, jsonify, Flask, render_template
-from waitress import serve
 
 import base64
 import numpy as np
@@ -98,4 +97,5 @@ def predict():
 
     return jsonify(response)
 
-serve(app)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', debug=True)

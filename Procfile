@@ -1,1 +1,1 @@
-web: flask translate compile; waitress-serve --port=$PORT app:app
+web: waitress-serve --port=$PORT waitress_server:app
