@@ -1,4 +1,4 @@
-from flask import request, jsonify, Flask, redirect
+from flask import request, jsonify, Flask, render_template
 from waitress import serve
 
 import base64
@@ -43,7 +43,7 @@ predict_count = 0
 
 @app.route('/')
 def index():
-    return redirect("http://localhost:8080/static/index.html", code=302)
+    return render_template('index.html')
 
 @app.route("/predict", methods = ['POST'])
 def predict():

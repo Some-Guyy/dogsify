@@ -64,7 +64,7 @@ $('#predict-button').click(function(event) {
 
         $('#predicted-dog-label').empty();
         $('#predicted-dog-label').append(response.prediction.class[0]);
-        $('#predicted-image').attr('src', 'assets/dog_images/' + response.prediction.class[0] + '.jpg');
+        $('#predicted-image').attr('src', 'static/assets/dog_images/' + response.prediction.class[0] + '.jpg');
 
         $('#other-predictions').append('Do you think that\'s the wrong breed? Try again with a different image, maybe the next one will be right!<br><br><u>Other Predictions:</u> ' + '<br>');
         for (var i = 1; i < response.prediction.class.length; i++) {
