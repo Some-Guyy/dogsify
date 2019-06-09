@@ -41,7 +41,7 @@ get_model()
 
 predict_count = 0
 
-@app.route('/')
+@app.route('$PORT/')
 def index():
     return render_template('index.html')
 
