@@ -34,7 +34,7 @@ $('#predict-button').click(function(event) {
         image: base64Image
     }
 
-    $.post('$PORT/predict', JSON.stringify(message), function(response) {
+    $.post('/predict', JSON.stringify(message), function(response) {
         $('#main-prediction').empty();
         $('#other-predictions').empty();
 
