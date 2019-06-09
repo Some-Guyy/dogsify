@@ -4,7 +4,6 @@
 flask==1.0.3
 gunicorn==19.9.0
 h5py==2.8.0
-hdf5==1.8.20
 keras==2.1.4
 numpy==1.16.3
 tensorflow-gpu==1.10.0
