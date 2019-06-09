@@ -1,4 +1,4 @@
-from flask import request, jsonify, Flask
+from flask import request, jsonify, Flask, render_template
 
 import base64
 import numpy as np
@@ -18,13 +18,12 @@ from PIL import Image as view_image
 app = Flask(__name__)
 
 def get_model():
-    global model
+    global model, graph
     model_path = 'models/120_dog_breeds_classifier_v2.h5'
 
     with CustomObjectScope({'relu6': keras.applications.mobilenet.relu6,'DepthwiseConv2D': keras.applications.mobilenet.DepthwiseConv2D}):
         model = load_model(model_path)
 
-    global graph
     graph = tf.get_default_graph()
     print("[INFO] Model loaded!")
 

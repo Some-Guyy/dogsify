@@ -26,7 +26,6 @@ decorator=4.4.0=py36_1
 defusedxml=0.6.0=py_0
 entrypoints=0.3=py36_0
 flask=1.0.3=py36_0
-flask-cors=3.0.7=py36_0
 freetype=2.9.1=ha9979f8_1
 gast=0.2.2=py36_0
 grpcio=1.16.1=py36h351948d_1
