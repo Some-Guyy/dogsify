@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'Pangolin'; /*a name to be used later*/
+    src: url('assets/fonts/Pangolin-Regular.ttf'); /*URL to font*/
+}
+
+* {
+    font-family: 'Pangolin';
+}
+
+body {
+    background-image: url('assets/background/brown-wall.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    text-align: center;
+}
+
+#footer-small {
+    font-size: 5px;
+}
+
+#credits-link {
+    color: blue;
+    text-decoration: underline;
+}
+#credits-link:hover {
+    color: darkblue;
+}
+#credits-link:active {
+    color: #2a2922;
+}
+
+.card {
+    text-align: center;
+}
+
+.colorLeaves {
+    color: #28a745;
+}
+.colorBark {
+    color: #2a2922;
+}
+.colorMarble {
+    color: #f3ebdd;
+}
+.colorBrownstone{
+    color: #7d5642;
+}
+
+.backColorLeaves {
+    background-color: #28a745;
+}
+.backColorBark {
+    background-color: #2a2922;
+}
+.backColorMarble {
+    background-color: #f3ebdd;
+}
+.backColorBrownstone{
+    background-color: #7d5642;
+}
+
+.btn-outline-leaves {
+    color: #28a745;
+    background-color: transparent;
+    background-image: none;
+    border-color: #28a745;
+}
+  
+.btn-outline-leaves:hover {
+    color: #f3ebdd;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+  
+.btn-outline-leaves:focus, .btn-outline-leaves.focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+  
+.btn-outline-leaves.disabled, .btn-outline-leaves:disabled {
+    color: #28a745;
+    background-color: transparent;
+}
+  
+.btn-outline-leaves:not([disabled]):not(.disabled):active, .btn-outline-leaves:not([disabled]):not(.disabled).active,
+.show > .btn-outline-leaves.dropdown-toggle {
+    color: #f3ebdd;
+    background-color: #28a745;
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
