@@ -1,1 +1,0 @@
-web: flask; flask translate compile; gunicorn app:app

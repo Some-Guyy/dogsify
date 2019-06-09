@@ -1,4 +1,5 @@
-from flask import request, jsonify, Flask, render_template
+from flask import request, jsonify, Flask, redirect
+from waitress import serve
 
 import base64
 import numpy as np
@@ -40,6 +41,10 @@ get_model()
 
 predict_count = 0
 
+@app.route('/')
+def index():
+    return redirect("http://localhost:8080/static/index.html", code=302)
+
 @app.route("/predict", methods = ['POST'])
 def predict():
     print('[INFO] Loading method...')
@@ -63,7 +68,6 @@ def predict():
 
     global predict_count
 
-    print('[INFO] Loading classes...')
     for folder in os.listdir('classes/120-dog-breeds/'):
         class_list.append(folder)
 
@@ -74,7 +78,7 @@ def predict():
     if num_of_result == 0:
         num_of_result = len(result_dictionary)
 
-    print('[INFO] Appending arrays...')
+    print('[INFO] Loading results...')
     for key, value in sorted(result_dictionary.items(), key=lambda item: item[1], reverse = True):
 
         if print_count < num_of_result:
@@ -93,3 +97,5 @@ def predict():
     print("Number of predicts so far:", predict_count)
 
     return jsonify(response)
+
+serve(app)

@@ -34,7 +34,7 @@ $('#predict-button').click(function(event) {
         image: base64Image
     }
 
-    $.post('http://localhost:5000/predict', JSON.stringify(message), function(response) {
+    $.post('http://localhost:8080/predict', JSON.stringify(message), function(response) {
         $('#main-prediction').empty();
         $('#other-predictions').empty();
 

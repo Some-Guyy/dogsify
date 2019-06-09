@@ -1,9 +1,0 @@
-# This file may be used to create an environment using:
-# $ conda create --name <env> --file <this file>
-# platform: win-64
-gunicorn
-numpy
-flask
-tensorflow-gpu
-pillow
-keras==2.1.4
