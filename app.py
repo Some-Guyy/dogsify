@@ -26,7 +26,7 @@ def get_model():
         model = load_model(model_path)
 
     graph = tf.get_default_graph()
-    print("[INFO] Model loaded!")
+    print('[INFO] Model loaded!')
 
 def prepare_image(image, target_size):
     if image.mode != "RGB":
@@ -36,7 +36,7 @@ def prepare_image(image, target_size):
     img_array_expanded_dims = np.expand_dims(img_array, axis = 0)
     return keras.applications.mobilenet.preprocess_input(img_array_expanded_dims)
 
-print("[INFO] Loading Keras model...")
+print('[INFO] Loading Keras model...')
 get_model()
 
 predict_count = 0
@@ -45,7 +45,7 @@ predict_count = 0
 def index():
     return render_template('index.html')
 
-@app.route("/predict", methods = ['POST'])
+@app.route('/predict', methods = ['POST'])
 def predict():
     print('[INFO] Loading method...')
     num_of_result = 6
@@ -94,7 +94,7 @@ def predict():
     }
 
     predict_count = predict_count + 1
-    print("Number of predicts so far:", predict_count)
+    print('Number of predicts so far:', predict_count)
 
     return jsonify(response)
 
