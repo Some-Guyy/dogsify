@@ -86,6 +86,8 @@ $('#credits-link').click(function(event) {
                     Model used for transfer learning: <a href="https://keras.io/applications/#mobilenet">MobileNet</a><br>\
                     Libraries used: <a href="https://keras.io/">Keras</a> and <a href="https://www.tensorflow.org/">TensorFlow</a><br>\
                     Dataset used to train model and images for sample predicted dogs: <a href="https://www.kaggle.com/jessicali9530/stanford-dogs-dataset">Stanford Dogs Dataset</a><br>\
+                    Font used: <a href="https://fonts.google.com/specimen/Pangolin">Pangolin</a><br>\
+                    Background image: Some image from <a href="http://www.seekgif.com/free-image/background-textures-related-keywords-suggestions-background--3760.html">seekgif</a><br>\
                     Have feedback to give? Email me at 1705408a@student.tp.edu.sg<br>\
                     Hope you enjoyed this little web application!<br>\
                 </p><br>\
