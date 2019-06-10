@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 def get_model():
     global model, graph
-    model_path = 'models/120_dog_breeds_classifier_v2.h5'
+    model_path = 'static/assets/models/120_dog_breeds_classifier_v2.h5'
 
     with CustomObjectScope({'relu6': keras.applications.mobilenet.relu6,'DepthwiseConv2D': keras.applications.mobilenet.DepthwiseConv2D}):
         model = load_model(model_path)
@@ -27,11 +27,11 @@ def get_model():
     graph = tf.get_default_graph()
     print('[INFO] Model loaded!')
 
-def prepare_image(image, target_size):
-    if image.mode != "RGB":
-        image = image.convert("RGB")
-    image = image.resize(target_size)
-    img_array = img_to_array(image)
+def prepare_image(img, target_size):
+    if img.mode != "RGB":
+        img = img.convert("RGB")
+    img = img.resize(target_size)
+    img_array = img_to_array(img)
     img_array_expanded_dims = np.expand_dims(img_array, axis = 0)
     return keras.applications.mobilenet.preprocess_input(img_array_expanded_dims)
 
@@ -67,7 +67,7 @@ def predict():
 
     global predict_count
 
-    for folder in os.listdir('classes/120-dog-breeds/'):
+    for folder in os.listdir('static/assets/classes/120-dog-breeds/'):
         class_list.append(folder)
 
     for i in class_list:
