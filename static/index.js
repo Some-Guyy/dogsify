@@ -19,7 +19,7 @@ $('#image-selector').change(function () {
     $('#predicted-dog-label').append('Predicted Dog');
 
     $('#predict-pretext').append('Now...identify the breed!');
-    $('#predict-button').append('<button type="button" class="btn btn-outline-leaves">Predict</button>');
+    $('#predict-button').append('<button type="button" class="btn btn-outline-leaves">Identify</button>');
 
     $('#main-prediction').empty();
     $('#other-predictions').empty();
@@ -85,7 +85,7 @@ $('#credits-link').click(function(event) {
                     Made by: Some random guy who thought that this was a good idea.<br>\
                     Model used for transfer learning: <a href="https://keras.io/applications/#mobilenet">MobileNet</a><br>\
                     Libraries used: <a href="https://keras.io/">Keras</a> and <a href="https://www.tensorflow.org/">TensorFlow</a><br>\
-                    Dataset used to train model and images for sample predicted dogs: <a href="https://www.kaggle.com/jessicali9530/stanford-dogs-dataset">Stanford Dogs Dataset</a><br>\
+                    Dataset used to train model and images for sample identified dogs: <a href="https://www.kaggle.com/jessicali9530/stanford-dogs-dataset">Stanford Dogs Dataset</a><br>\
                     Font used: <a href="https://fonts.google.com/specimen/Pangolin">Pangolin</a><br>\
                     Background image: Some image from <a href="http://www.seekgif.com/free-image/background-textures-related-keywords-suggestions-background--3760.html">seekgif</a><br>\
                     Have feedback to give? Email me at 1705408a@student.tp.edu.sg<br>\
