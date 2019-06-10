@@ -109,8 +109,6 @@ def predict():
     global predict_count
     global class_list
 
-    print(class_list)
-
     for i in class_list:
         result_dictionary[i] = prediction[0][class_index_count]
         class_index_count = class_index_count + 1
