@@ -26,8 +26,6 @@ $('#image-selector').change(function () {
 });
 
 $('#predict-button').click(function(event) {
-    $('html, body').animate({scrollTop:$(document).height()}, 'slow');
-
     $('#main-prediction').append('Predicting the image...');
     
     let message = {
@@ -72,11 +70,11 @@ $('#predict-button').click(function(event) {
         }
         $('#other-predictions').append("");
     });
+
+    $('html, body').animate({scrollTop:$(document).height()}, 'slow');
 });
 
 $('#credits-link').click(function(event) {
-    $('html, body').animate({scrollTop:$(document).height()}, 'slow');
-
     $('#credits-section').empty();
     $('#credits-section').append(
     '<div class="col">\
@@ -89,10 +87,12 @@ $('#credits-link').click(function(event) {
                     Libraries used: <a href="https://keras.io/">Keras</a> and <a href="https://www.tensorflow.org/">TensorFlow</a><br>\
                     Dataset used to train model and images for sample predicted dogs: <a href="https://www.kaggle.com/jessicali9530/stanford-dogs-dataset">Stanford Dogs Dataset</a><br>\
                     Have feedback to give? Email me at 1705408a@student.tp.edu.sg<br>\
-                    Hope you enjoyed this little web application!\
+                    Hope you enjoyed this little web application!<br>\
                 </p><br>\
             </div>\
         </div>\
     </div>'
     );
+
+    $('html, body').animate({scrollTop:$(document).height()}, 'slow');
 });
