@@ -26,7 +26,7 @@ $('#image-selector').change(function () {
 });
 
 $('#predict-button').click(function(event) {
-    $('#main-prediction').append('Predicting the image, this may take a while...');
+    $('#main-prediction').append('Predicting the image, this may take a while..sadsd.');
     
     let message = {
         image: base64Image
