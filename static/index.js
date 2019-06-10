@@ -16,7 +16,7 @@ $('#image-selector').change(function () {
     $('#predict-button').empty();
 
     $('#predicted-dog-label').empty();
-    $('#predicted-dog-label').append('Predicted Dog');
+    $('#predicted-dog-label').append('Identified Dog');
 
     $('#predict-pretext').append('Now...identify the breed!');
     $('#predict-button').append('<button type="button" class="btn btn-outline-leaves">Identify</button>');
