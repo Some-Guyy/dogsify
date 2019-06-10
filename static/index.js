@@ -26,6 +26,8 @@ $('#image-selector').change(function () {
 });
 
 $('#predict-button').click(function(event) {
+    $('#main-prediction').empty();
+    $('#other-predictions').empty();
     $('#main-prediction').append('Identifying your image, this may take a while...');
     
     let message = {
