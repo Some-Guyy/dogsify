@@ -70,6 +70,7 @@ def predict():
     for folder in os.listdir('static/assets/classes/120-dog-breeds/'):
         class_list.append(folder)
 
+    print(class_list)
     for i in class_list:
         result_dictionary[i] = prediction[0][class_index_count]
         class_index_count = class_index_count + 1
