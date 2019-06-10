@@ -40,13 +40,17 @@ get_model()
 
 predict_count = 0
 
+class_list = []
+for folder in os.listdir('static/assets/classes/120-dog-breeds/'):
+        class_list.append(folder)
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 @app.route('/predict', methods = ['POST'])
 def predict():
-    print('[INFO] Loading method...')
+    print('[INFO] Loading identifier method...')
     num_of_result = 6
     message = request.get_json(force = True)
     encoded = message['image']
@@ -58,7 +62,6 @@ def predict():
         prediction = model.predict(preprocessed_image)
     
     result_dictionary = {}
-    class_list = []
     class_index_count = 0
     print_count = 0
 
@@ -66,11 +69,10 @@ def predict():
     percentage_array = []
 
     global predict_count
-
-    for folder in os.listdir('static/assets/classes/120-dog-breeds/'):
-        class_list.append(folder)
+    global class_list
 
     print(class_list)
+    
     for i in class_list:
         result_dictionary[i] = prediction[0][class_index_count]
         class_index_count = class_index_count + 1
