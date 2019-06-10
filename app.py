@@ -88,7 +88,7 @@ def index():
 
 @app.route('/predict', methods = ['POST'])
 def predict():
-    print('[INFO] Loading identifier method...')
+    print('[INFO] Identifying image...')
     num_of_result = 6
     message = request.get_json(force = True)
     encoded = message['image']
@@ -132,7 +132,7 @@ def predict():
     }
 
     predict_count = predict_count + 1
-    print('Number of predicts so far:', predict_count)
+    print('[INFO] Number of predicts so far:', predict_count)
 
     return jsonify(response)
 
