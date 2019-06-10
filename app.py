@@ -3,7 +3,6 @@ from flask import request, jsonify, Flask, render_template
 import base64
 import numpy as np
 import io
-import os
 
 import keras
 from keras import backend as K
