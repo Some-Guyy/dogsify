@@ -18,7 +18,7 @@ app = Flask(__name__)
 
 def get_model():
     global model, graph
-    model_path = 'static/assets/models/120_dog_breeds_classifier_v2.h5'
+    model_path = 'static/assets/models/121_dog_breeds_classifier_layer5_epoch10.h5'
 
     with CustomObjectScope({'relu6': keras.applications.mobilenet.relu6,'DepthwiseConv2D': keras.applications.mobilenet.DepthwiseConv2D}):
         model = load_model(model_path)
@@ -79,7 +79,8 @@ class_list = [
     'n02112137-chow', 'n02112350-keeshond', 'n02112706-Brabancon_griffon',
     'n02113023-Pembroke', 'n02113186-Cardigan', 'n02113624-toy_poodle',
     'n02113712-miniature_poodle', 'n02113799-standard_poodle', 'n02113978-Mexican_hairless',
-    'n02115641-dingo', 'n02115913-dhole', 'n02116738-African_hunting_dog'
+    'n02115641-dingo', 'n02115913-dhole', 'n02116738-African_hunting_dog',
+    'n02116739-Shiba_Inu'
     ]
 
 @app.route('/')
