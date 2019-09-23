@@ -1,4 +1,5 @@
-*.pyc
+#Python Cache
+*.py[cod]
 __pycache__/
 
 instance/
